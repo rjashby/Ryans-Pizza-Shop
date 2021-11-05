@@ -1,4 +1,3 @@
-//Business Logic
 function Pizza(size, topping1, topping2, topping3) {
   this.size = size;
   this.topping1 = topping1;
@@ -12,7 +11,6 @@ Pizza.prototype.cost = function () {
   let toppingOneAdd = 0;
   let toppingTwoAdd = 0;
   let toppingThreeAdd = 0;
-  let sodaCost = 0
 
   if(this.size === "small") {
     sizeAdd += 6;
@@ -90,7 +88,6 @@ Pizza.prototype.cost = function () {
   return priceTotal;
 };
 
-//UI Logic
 
 $(document).ready(function() {
   $("form#make-pizza").submit(function(event) {

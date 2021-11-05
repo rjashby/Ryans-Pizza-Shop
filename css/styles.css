@@ -1,6 +1,8 @@
 body {
   background-color: cornsilk;
   font-family: 'Abel', sans-serif;
+  background-image: url("https://besthqwallpapers.com/Uploads/18-12-2019/116184/light-wooden-texture-close-up-wooden-backgrounds-wooden-textures-light-brown-backgrounds.jpg");
+  text-shadow: lightgrey;
 }
 h1 {
   text-align: center;
@@ -22,6 +24,7 @@ li:hover {
 
 img {
   display: flex;
+  border: 3px solid gray;
 }
 
 #inline {

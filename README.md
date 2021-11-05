@@ -73,6 +73,14 @@ return priceTotal;
 *Input:* "small"
 *Expected output:* "6"
 
+*Test:* "It will increment the cost of the pizza upwards based on the first topping chosen"
+*Code:*  if(this.topping1 === "pepperoni") {
+          toppingOneAdd += 3;
+          priceTotal = toppingOneAdd;
+          return priceTotal;
+*Input:* "pepperoni"
+*Expected output:* "3"
+
 ## Known Bugs 
 
 * _No Known Bugs_  

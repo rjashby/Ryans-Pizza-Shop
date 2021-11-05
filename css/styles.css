@@ -10,6 +10,7 @@ h1 {
 
 h4 {
   text-align: center;
+  text-decoration: underline;
 }
 
 #total-cost {
@@ -26,6 +27,11 @@ img {
   display: flex;
   border: 3px solid gray;
 }
+
+.form-group {
+  border: 3px solid gray;
+}
+
 
 #inline {
   margin: 1em;

@@ -103,6 +103,7 @@ $(document).ready(function() {
     } else {
       $("#pizza-price").html("$" + pizza1.cost())
       $("#total-cost").show();
+      window.scrollTo(0,document.body.scrollHeight);
     };
   });
 });

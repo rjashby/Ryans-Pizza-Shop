@@ -25,32 +25,69 @@ Pizza.prototype.cost = function () {
     sizeAdd += 0;
   };
   
-  if(this.toppingOneAdd === "pepperoni:checked") {
+  if(this.topping1 === "pepperoni") {
     toppingOneAdd += 3;
-  } else if(this.size === "sausage") {
+  } else if(this.topping1 === "sausage") {
     toppingOneAdd += 3;
-  } else if(this.size === "ham") {
+  } else if(this.topping1 === "ham") {
     toppingOneAdd += 3;
-  } else if(this.size === "bacon") {
+  } else if(this.topping1 === "bacon") {
     toppingOneAdd += 3;
-  } else if(this.size === "onions") {
+  } else if(this.topping1 === "onions") {
     toppingOneAdd += 2;
-  } else if(this.size === "peppers") {
+  } else if(this.topping1 === "peppers") {
     toppingOneAdd += 2;
-  } else if(this.size === "mushrooms") {
+  } else if(this.topping1 === "mushrooms") {
     toppingOneAdd += 2;
-  } else if(this.size === "pineapple") {
+  } else if(this.topping1 === "pineapple") {
     toppingOneAdd += 2;
-  } else (this.size === "cheese"); {
-    toppingOneAdd += 2;
+  } else (this.topping1 === "cheese"); {
+    toppingOneAdd += 0;
   };
 
- 
+  if(this.toppingTwoAdd === "pepperoni") {
+    toppingTwoAdd += 3;
+  } else if(this.topping2 === "sausage") {
+    toppingTwoAdd += 3;
+  } else if(this.topping2 === "ham") {
+    toppingTwoAdd += 3;
+  } else if(this.topping2 === "bacon") {
+    toppingTwoAdd += 3;
+  } else if(this.topping2 === "onions") {
+    toppingTwoAdd += 2
+  } else if(this.topping2 === "peppers") {
+    toppingTwoAdd += 2;
+  } else if(this.topping2 === "mushrooms") {
+    toppingTwoAdd += 2;
+  } else if(this.topping2 === "pineapple") {
+    toppingTwoAdd += 2;
+  } else (this.topping2 === "none"); {
+    toppingTwoAdd += 0;
+  };
 
-  priceTotal = sizeAdd + toppingOneAdd + toppingTwoAdd;
+  if(this.toppingThreeAdd === "pepperoni") {
+    toppingThreeAdd += 3;
+  } else if(this.topping3 === "sausage") {
+    toppingThreeAdd += 3;
+  } else if(this.topping3 === "ham") {
+    toppingThreeAdd += 3;
+  } else if(this.topping3 === "bacon") {
+    toppingThreeAdd += 3;
+  } else if(this.topping3 === "onions") {
+    toppingThreeAdd += 2;
+  } else if(this.topping3 === "peppers") {
+    toppingThreeAdd += 2;
+  } else if(this.topping3 === "mushrooms") {
+    toppingThreeAdd += 2;
+  } else if(this.topping3 === "pineapple") {
+    toppingThreeAdd += 2;
+  } else (this.topping3 === "none"); {
+    toppingThreeAdd += 0;
+  };
+
+  priceTotal = sizeAdd + toppingOneAdd + toppingTwoAdd + toppingThreeAdd;
   return priceTotal;
 };
-
 
 //UI Logic
 
@@ -60,12 +97,14 @@ $(document).ready(function() {
     $("#total-cost").hide();
     let size = $("select#size option:selected").val();
     let topping1 = $("input:radio[name=radio1]:checked").val();
-    let topping2 = $("select#second-topping option:selected").val();
-    let topping3 = $("select#third-topping option:selected").val();
+    let topping2 = $("input:radio[name=radio2]:checked").val();
+    let topping3 = $("input:radio[name=radio3]:checked").val();
     let pizza1 = new Pizza(size, topping1, topping2, topping3);
     console.log(pizza1);
     console.log(size);
     console.log(topping1);
+    console.log(topping2);
+    console.log(topping3);
     $("#pizza-price").html("$" + pizza1.cost())
     $("#total-cost").show();
   });

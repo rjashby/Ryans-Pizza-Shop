@@ -82,12 +82,20 @@ return priceTotal;
 *Expected output:* "3"
 
 *Test:* "It will increment the cost of the pizza upwards based on the second topping chosen"
-*Code:*  if(this.topping1 === "sausage") {
+*Code:*  if(this.topping2 === "sausage") {
           toppingTwoAdd += 3;
           priceTotal = toppingTwoAdd;
           return priceTotal;
 *Input:* "sausage"
 *Expected output:* "3"
+
+*Test:* "It will increment the cost of the pizza upwards based on the third topping chosen"
+*Code:*  if(this.topping3 === "onions") {
+          toppingThreeAdd += 2;
+          priceTotal = toppingThreeAdd;
+          return priceTotal;
+*Input:* "onions"
+*Expected output:* "2"
 
 ## Known Bugs 
 

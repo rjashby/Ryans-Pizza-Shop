@@ -50,9 +50,24 @@ _ADD DESCRIPTION HERE._
 ### Description: newPizza()
 *Test:* "It should return an object with the properties of size and an array of toppings."
 *Code:* pizza1 = new Pizza("medium", ["ham", "pineapple"]);
-        pizza1.size;
+*Input:*  pizza1.size;
 *Expected output:* "medium"
 
+*Test:* "It should create a Pizza prototype method calculating cost based on size and toppings, starting at base zero"
+*Code:* Pizza.prototype.cost = function () {
+  let priceTotal = 0
+  let sizeAdd = 0
+  let toppingOneAdd = 0
+  let toppingTwoAdd = 0
+  let toppingThreeAdd = 0
+}
+*Expected output:* "0"
+
+*Test:* "It will increment the cost of the pizza upwards based on the size chosen"
+*Code:*  if(this.size === "small") {
+          sizeAdd += 6;
+*Input:* "small"
+*Expected output:* "6"
 
 ## Known Bugs 
 

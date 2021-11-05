@@ -28,3 +28,20 @@ Pizza.prototype.cost = function () {
   priceTotal = sizeAdd;
   return priceTotal;
 };
+
+
+//UI Logic
+
+$(document).ready(function() {
+  $("form#make-pizza").submit(function(event) {
+    event.preventDefault();
+    let pizzaSize = $("select#size option:selected").val();
+    let topping1 = $("select#first-topping option:selected").val();
+    let topping2 = $("select#second-topping option:selected").val();
+    let topping3 = $("select#third-topping option:selected").val();
+    let pizza1 = new Pizza(size, topping1, topping2, topping3);
+    console.log(pizza1);
+    $("#pizza-price").html("$" + pizza1.cost())
+    $("#total-cost").show();
+  });
+});

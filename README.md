@@ -61,11 +61,15 @@ _ADD DESCRIPTION HERE._
   let toppingTwoAdd = 0
   let toppingThreeAdd = 0
 }
+return priceTotal;
+*Input:* 
 *Expected output:* "0"
 
 *Test:* "It will increment the cost of the pizza upwards based on the size chosen"
 *Code:*  if(this.size === "small") {
           sizeAdd += 6;
+          priceTotal = sizeAdd;
+          return priceTotal;
 *Input:* "small"
 *Expected output:* "6"
 

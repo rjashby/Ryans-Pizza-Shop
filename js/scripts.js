@@ -94,18 +94,17 @@ Pizza.prototype.cost = function () {
 $(document).ready(function() {
   $("form#make-pizza").submit(function(event) {
     event.preventDefault();
-    $("#total-cost").hide();
     let size = $("select#size option:selected").val();
     let topping1 = $("input:radio[name=radio1]:checked").val();
     let topping2 = $("input:radio[name=radio2]:checked").val();
     let topping3 = $("input:radio[name=radio3]:checked").val();
     let pizza1 = new Pizza(size, topping1, topping2, topping3);
-    console.log(pizza1);
-    console.log(size);
-    console.log(topping1);
-    console.log(topping2);
-    console.log(topping3);
-    $("#pizza-price").html("$" + pizza1.cost())
-    $("#total-cost").show();
+    if (size === "none") {
+      $("#total-cost").hide();
+      alert("Please Choose Your Pizza Size")
+    } else {
+      $("#pizza-price").html("$" + pizza1.cost())
+      $("#total-cost").show();
+    };
   });
 });

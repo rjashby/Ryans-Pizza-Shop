@@ -101,8 +101,9 @@ $(document).ready(function() {
       $("#total-cost").hide();
       alert("Please Choose Your Pizza Size")
     } else {
-      $("#pizza-price").html("$" + pizza1.cost())
+      $("#pizza-price").html("$" + pizza1.cost().toFixed(2))
       $("#total-cost").show();
+      console.log(pizza1);
       window.scrollTo(0,document.body.scrollHeight);
     };
   });

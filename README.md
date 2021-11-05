@@ -97,6 +97,13 @@ return priceTotal;
 *Input:* "onions"
 *Expected output:* "2"
 
+*Test:* "It will calculate the total cost of the pizza based on the size and toppings chosen"
+*Code:*  priceTotal = sizeAdd + toppingOneAdd + toppingTwoAdd + toppingThreeAdd;
+         return priceTotal;
+*Input:* "small, pepperoni, mushrooms, onions"
+*Expected output:* Pizza {size: 'small', topping1: 'pepperoni', topping2: 'mushrooms', topping3: 'onions'}
+  pizza1.cost = $13
+
 ## Known Bugs 
 
 * _No Known Bugs_  

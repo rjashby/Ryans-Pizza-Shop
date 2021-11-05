@@ -12,6 +12,7 @@ Pizza.prototype.cost = function () {
   let toppingOneAdd = 0;
   let toppingTwoAdd = 0;
   let toppingThreeAdd = 0;
+  let sodaCost = 0
 
   if(this.size === "small") {
     sizeAdd += 6;

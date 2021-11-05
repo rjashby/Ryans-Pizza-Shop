@@ -17,3 +17,14 @@ h4 {
 li:hover{
   background-color: lightgreen;
 } 
+
+img {
+  display: flex;
+}
+
+#inline {
+  margin: 1em;
+  border: 1em;
+  padding: 1em;
+  text-align: justify;
+}

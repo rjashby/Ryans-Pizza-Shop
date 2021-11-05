@@ -45,7 +45,9 @@ Pizza.prototype.cost = function () {
     toppingOneAdd += 2;
   };
 
-  priceTotal = sizeAdd;
+ 
+
+  priceTotal = sizeAdd + toppingOneAdd + toppingTwoAdd;
   return priceTotal;
 };
 
@@ -57,12 +59,13 @@ $(document).ready(function() {
     event.preventDefault();
     $("#total-cost").hide();
     let size = $("select#size option:selected").val();
-    let topping1 = $("select#first-topping option:selected").val();
+    let topping1 = $("input:radio[name=radio1]:checked").val();
     let topping2 = $("select#second-topping option:selected").val();
     let topping3 = $("select#third-topping option:selected").val();
     let pizza1 = new Pizza(size, topping1, topping2, topping3);
     console.log(pizza1);
     console.log(size);
+    console.log(topping1);
     $("#pizza-price").html("$" + pizza1.cost())
     $("#total-cost").show();
   });
